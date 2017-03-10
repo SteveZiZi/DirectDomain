@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "On clear logs..."
+rm -f /mnt/data/log/*

@@ -1,0 +1,411 @@
+/**************************************
+*  QWidget
+***************************************/
+QWidget
+{
+	outline: none;
+	font: 17px;
+	background-color:#273376;
+}
+/**************************************
+*  End QWidget font-weight:bold;
+***************************************/
+
+/**************************************
+*  QMessageBox QInputDialog
+***************************************/
+QMessageBox
+{
+	outline: none;
+}
+QInputDialog
+{
+	outline: none;
+}
+/**************************************
+*  End QMessageBox  QInputDialog
+***************************************/
+
+/**************************************
+*  QFrame
+***************************************/
+CBaseSetW QFrame,CPwdWidget QFrame,CTaskBaseInfoW QFrame,CDisposeWidget QFrame
+{
+	background-color: #9ca1b0;
+	color: black;
+}
+CBaseSetW QFrame QPushButton,CPwdWidget QFrame QPushButton
+{
+	background-color: #3949a9;
+	color: white;
+	font: 17px;
+	padding: -2;
+	margin: 0;
+}
+QDateTimeEdit
+{
+	background-color: white;
+}
+QFrame QCheckBox
+{
+	background-color: #9ca1b0;
+	color: black;
+}
+QFrame QCheckBox:disabled
+{
+	color: gray;
+}
+QFrame QCheckBox#manualCheck
+{
+	background-color: none;
+	color: white;
+}
+QFrame QComboBox
+{
+	background-color: #9ca1b0;
+	color: black;
+}
+QFrame QComboBox:disabled
+{
+	color: gray;
+}
+/**************************************
+*  End QFrame
+***************************************/
+/**************************************
+*  QLabel
+***************************************/	
+QLabel
+{
+	color: white;
+}
+QLabel#gprsLabel
+{
+	color: gray;
+}
+QLabel#logoLabel
+{
+	min-width:27px;
+	min-height:30px;
+	background-image: url(:/logo.png);
+}
+QLabel#wifiLabel
+{
+	min-width:38px;
+	min-height:30px;
+	background-image: url(:/wifi.png);
+}
+QLabel#warnLabel
+{
+	min-width:27px;
+	min-height:27px;
+	background-image: url(:/warn.png);
+}
+QLabel#pageLabel
+{
+	font: 22px;
+}
+/**************************************
+*  End QLabel
+***************************************/	
+
+/**************************************
+*  QToolButton
+***************************************/
+QToolButton
+{
+	border:none;
+	margin:0px;
+}
+QToolButton#menuBtn_1
+{
+	background-image: url(:/monitor.png);
+}
+QToolButton#menuBtn_1:checked
+{
+	background-image: url(:/monitor_checked.png);
+}
+QToolButton#menuBtn_2
+{
+	background-image: url(:/timeCtrl.png);
+}
+QToolButton#menuBtn_2:checked
+{
+	background-image: url(:/timeCtrl_checked.png);
+}
+QToolButton#menuBtn_3
+{
+	background-image: url(:/lightCtrl.png);
+}
+QToolButton#menuBtn_3:checked
+{
+	background-image: url(:/lightCtrl_checked.png);
+}
+QToolButton#menuBtn_4
+{
+	background-image: url(:/constanceAs.png);
+}
+QToolButton#menuBtn_4:checked
+{
+	background-image: url(:/constanceAs_checked.png);
+}
+QToolButton#menuBtn_5
+{
+	background-image: url(:/log.png);
+}
+QToolButton#menuBtn_5:checked
+{
+	background-image: url(:/log_checked.png);
+}
+QToolButton#menuBtn_6
+{
+	background-image: url(:/system.png);
+}
+QToolButton#menuBtn_6:checked
+{
+	background-image: url(:/system_checked.png);
+}
+QToolButton#menuBtn_7
+{
+	background-image: url(:/config.png);
+}
+QToolButton#menuBtn_7:checked
+{
+	background-image: url(:/config_checked.png);
+}
+/**************************************
+*  End QToolButton
+***************************************/
+
+/**************************************
+*  QPushButton
+***************************************/
+QPushButton
+{
+	background-color: #3949a9;
+	color: white;
+	font: 22px;
+	padding: -2;
+	margin: 0;
+}
+QPushButton#tenAddBtn
+{
+	background-color: white;
+	background-image: url(:/tenAdd.png);
+}
+QPushButton#tenAddBtn:disabled
+{
+	background-image: url(:/tenAdd_Dis.png);
+}
+QPushButton#tenSubBtn
+{
+	background-color: white;
+	background-image: url(:/tenSub.png);
+}
+QPushButton#tenSubBtn:disabled
+{
+	background-image: url(:/tenSub_Dis.png);
+}
+QPushButton#switchBtn
+{
+	border: 0px;
+}
+QPushButton#orderDelBtn
+{
+	background-color:#fd4a02;
+}
+/**************************************
+*  End QPushButton
+***************************************/
+
+/**************************************
+*  QLineEdit
+***************************************/
+QLineEdit
+{
+	border: 1px;
+	background-color: white;
+	color: black;
+}
+/**************************************
+*  End QLineEdit
+***************************************/
+
+/**************************************
+*  QCheckBox
+***************************************/
+QCheckBox
+{
+	color: white;
+}
+
+QCheckBox::indicator 
+{
+	spacing: 5px;
+    width: 13px;
+    height: 13px;
+}
+
+QCheckBox::indicator:unchecked 
+{
+    image: url(:/unchecked.png);
+}
+
+QCheckBox::indicator:checked 
+{
+    image: url(:/checked.png);
+}
+/**************************************
+*  End QCheckBox
+***************************************/
+
+/**************************************
+*  QTableWidget
+***************************************/
+QHeaderView::section
+{
+	background-color: #4378ac;
+	color: white;
+}
+QTableWidget
+{
+	background-color: #d7def8; 
+	alternate-background-color: #a5bedd;
+	border: 0px;
+}
+QTableWidget#cabinetReport
+{
+	background-color: #fbf7c3;
+	color: #e76000
+}
+/**************************************
+*  End QTableWidget
+***************************************/
+
+/**************************************
+* QTableView
+***************************************/
+QTableView
+{
+	background-color: #d7def8; 
+	alternate-background-color: #a5bedd;
+	border: 0px;
+}
+/**************************************
+*  End QTableView
+***************************************/
+
+/**************************************
+* QListWidget
+***************************************/
+QFrame QListWidget
+{
+	background-color: #d7def8; 
+	alternate-background-color: #a5bedd;
+	border: 0px;
+}
+/**************************************
+*  End QListWidget
+***************************************/
+
+/**************************************
+*  QTabWidget
+***************************************/
+QTabWidget::pane
+{	
+	border: 0px;
+}
+QTabBar::tab
+{	
+	width: 120px;
+	color: white;
+	height: 45px;
+	font: 22px;
+	border-left:1px solid black;
+}
+QTabBar::tab:selected 
+{
+	background-color: #4e5ebf;
+}
+QTabBar::tab:!selected 
+{
+	background-color: #3b405d; 
+}
+/**************************************
+*  End QTabWidget
+***************************************/
+
+/**************************************
+* CLightTaskOrder
+***************************************/
+CLightTaskOrder QLabel
+{
+	background-color: none; 
+	color: black;
+}
+/**************************************
+*  End CLightTaskOrder
+***************************************/
+/**************************************
+* CTimeTaskOrder
+***************************************/
+CTimeTaskOrder QLabel
+{
+	background-color: none; 
+	color: black;
+}
+/**************************************
+*  End CTimeTaskOrder
+***************************************/
+/**************************************
+* CColorWidget
+***************************************/
+CColorWidget QLabel
+{
+	background-color: none; 
+	color: black;
+}
+/**************************************
+*  End CColorWidget
+***************************************/
+/**************************************
+*  QScrollBar
+***************************************/
+QScrollBar:vertical 
+{
+    border-width: 16px 0px 16px 0px;
+    border-image: url(:/track.png) 16 0 16 0 repeat repeat;
+    margin-top: 7px;
+    padding-bottom: 7px;
+}
+
+QScrollBar::handle:vertical 
+{
+    min-height: 30px;
+    border-width: 17px 0px 17px 0px;
+    border-image: url(:/handle.png) 17 0 17 0 repeat repeat;
+}
+
+QScrollBar::sub-line:vertical 
+{
+    width: 17px;
+    height: 22px;
+    subcontrol-position: top left;
+    subcontrol-origin: margin;
+    background-image: url(:/upArrow.png)
+}
+
+QScrollBar::add-line:vertical 
+{
+    width: 17px;
+    height: 22px;
+    subcontrol-position: bottom;
+    subcontrol-origin: border;
+    background-image: url(:/downArrow.png)
+}
+/**************************************
+*  End QScrollBar
+***************************************/
+
+
+

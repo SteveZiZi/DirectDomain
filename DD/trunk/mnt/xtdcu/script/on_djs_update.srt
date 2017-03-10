@@ -1,0 +1,123 @@
+#!/bin/sh
+if [ "$1" = "-h" ]; then
+    echo "
+ScriptName  :   autoupdate
+Version     :   1.1
+Date        :   2011-01-11
+Powered by  :   SuXufeng
+Distribute  :   autoupdate is a script file base on BusyBox1.0
+Usage       : 
+                autoupdate [VERSION_NAME] [BACKUP_FILE] [UNPACK_DIRECTORY]
+Example1    : 
+            autoupdate 5100-138-004-510000 /mnt old_files
+
+            It tell the system to backup the files & directorys into the TGZ file type
+            named old_files.tgz, locate in /mnt/backup or /mnt.
+            After that, the new system file named update_5100-138-004-510000.tgz
+            locate on /mnt or /mnt/update will be unpacked into /mnt
+Example2    :
+            autoupdate
+
+            It tell the system to use default option as:
+            update file name    :   /mnt/update/update.tgz or /mnt/update.tgz
+            backup file name    :   /mnt/backup/old_dyjc.tgz or /mnt/old_dyjc.tgz
+            unpack directory    :   /mnt"
+    echo ""
+    echo "If you still have problems, please dial: 020-28377642 for an advanced help!"
+    exit
+fi
+echo "Updating the GDDYJC system..."
+
+/mnt/dyjc/program/dyjc -stop
+
+BACKUP_DIR="/mnt/backup"
+
+if [ "$1" = "" ]; then
+    UPDATE_PACKAGE="update.tgz"
+else
+    UPDATE_PACKAGE="update_$1.tgz"
+fi
+
+if [ -r /mnt/update/$UPDATE_PACKAGE ]; then
+    TOP_DIR="/mnt/update"
+else
+    TOP_DIR="/mnt"
+fi
+
+echo "Update package name is $TOP_DIR/$UPDATE_PACKAGE"
+
+if [ "$2" = "" ]; then
+    UNPACK_DIR="/mnt/"
+else
+    UNPACK_DIR="$2"
+fi
+echo "Unpack into $UNPACK_DIR"
+
+if [ "$3" = "" ]; then
+    OLD_DYJC="old_dyjc.tgz"
+else
+    OLD_DYJC="$3.tgz"
+fi
+
+if [ -r /mnt/backup/$OLD_DYJC ]; then
+    BACKUP_DIR="/mnt/backup"
+else
+    BACKUP_DIR="/mnt"
+fi
+echo "Backup the old files as $BACKUP_DIR/$OLD_DYJC"
+
+if [ -r $TOP_DIR/$UPDATE_PACKAGE ]; then
+    if [ $OLD_DYJC != "None" ]; then
+        echo "Backing up the old system files..."
+        if [ -r $BACKUP_DIR/$OLD_DYJC ]; then
+            rm -f $BADKUP_DIR/$OLD_DYJC
+        fi
+        rm -rf /mnt/data/log/*
+        tar -czf $BACKUP_DIR/$OLD_DYJC dyjc data user
+    fi
+
+    echo "Removing old system files..."
+    rm -rf dyjc
+
+    echo "Unpacking new system files,please wait a while..."
+    cd $UNPACK_DIR
+    tar -zxf $TOP_DIR/$UPDATE_PACKAGE
+
+    echo "Deleting update pack file..."
+    rm -f $TOP_DIR/$UPDATE_PACKAGE
+
+    echo "Reseting the system status..."
+    rm -rf /mnt/user/dyjc/data/*
+    
+    echo "Clearing datas and logs..."
+    rm -rf /mnt/data/*
+
+    echo "Clearing old system configs..."
+    rm -f /mnt/user/dyjc/set/djs/gddyjc/gd/trace.ini
+    rm -f /mnt/user/dyjc/set/djs/gddyjc/gd/httx_plan.ini
+    rm -f /mnt/user/dyjc/set/djs/gddyjc/gd/dbcj.ini
+    rm -f /mnt/user/dyjc/set/djs/gddyjc/gd/task.ini
+    
+    echo "Update finished ,please wait a while (more than 15 seconds,less than 30 seconds)"
+    echo "You can reboot the device use the RESET button,too!"
+    rm -rf /tmp/*
+    killall -9 dyjcd
+    killall -9 dyjc
+    killall -9 dyjc_httx1
+    killall -9 dyjc_httx2
+    killall -9 dyjc_httx3
+    killall -9 dyjc_work
+    killall -9 dyjc_dbcj
+    killall -9 dyjc_jilian1
+    killall -9 dyjc_dbcj1
+    killall -9 dyjc_dbcj2
+    killall -9 dyjc_dbcj3
+    killall -9 dyjc_ppp
+    reboot
+else
+    echo "Missing update file"
+    echo "Please correct your update package name:$TOP_DIR/$UPDATE_PACKAGE"
+    echo "You can type: autoupdate -h, then ENTER for a normal help!"
+fi
+
+

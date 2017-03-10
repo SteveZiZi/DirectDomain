@@ -1,0 +1,9 @@
+echo "On djs update file found..."
+
+export LD_LIBRARY_PATH="/mnt/dyjc/program/lib"
+
+/mnt/dyjc/program/dyjc -stop
+
+killall dyjcd dyjc
+
+

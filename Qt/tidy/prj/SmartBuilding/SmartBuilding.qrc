@@ -1,0 +1,35 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="checked.png">Resources/images/checked.png</file>
+        <file alias="config.png">Resources/images/config.png</file>
+        <file alias="config_checked.png">Resources/images/config_checked.png</file>
+        <file alias="constanceAs.png">Resources/images/constanceAs.png</file>
+        <file alias="constanceAs_checked.png">Resources/images/constanceAs_checked.png</file>
+        <file alias="lightCtrl.png">Resources/images/lightCtrl.png</file>
+        <file alias="lightCtrl_checked.png">Resources/images/lightCtrl_checked.png</file>
+        <file alias="log.png">Resources/images/log.png</file>
+        <file alias="log_checked.png">Resources/images/log_checked.png</file>
+        <file alias="logo.png">Resources/images/logo.png</file>
+        <file alias="monitor.png">Resources/images/monitor.png</file>
+        <file alias="monitor_checked.png">Resources/images/monitor_checked.png</file>
+        <file alias="start.png">Resources/images/start.png</file>
+        <file alias="system.png">Resources/images/system.png</file>
+        <file alias="system_checked.png">Resources/images/system_checked.png</file>
+        <file alias="timeCtrl.png">Resources/images/timeCtrl.png</file>
+        <file alias="timeCtrl_checked.png">Resources/images/timeCtrl_checked.png</file>
+        <file alias="turnOff.png">Resources/images/truenOff.png</file>
+        <file alias="turnOn.png">Resources/images/turnOn.png</file>
+        <file alias="unchecked.png">Resources/images/unchecked.png</file>
+        <file alias="warn.png">Resources/images/warn.png</file>
+        <file alias="wifi.png">Resources/images/wifi.png</file>
+        <file alias="samrtBuilding.qss">Resources/qss/smartBuilding.qss</file>
+        <file alias="tenAdd.png">Resources/images/tenAdd.png</file>
+        <file alias="tenAdd_Dis.png">Resources/images/tenAdd_Dis.png</file>
+        <file alias="tenSub.png">Resources/images/tenSub.png</file>
+        <file alias="tenSub_Dis.png">Resources/images/tenSub_Dis.png</file>
+        <file alias="downArrow.png">Resources/images/downArrow.png</file>
+        <file alias="handle.png">Resources/images/handle.png</file>
+        <file alias="upArrow.png">Resources/images/upArrow.png</file>
+        <file alias="track.png">Resources/images/track.png</file>
+    </qresource>
+</RCC>

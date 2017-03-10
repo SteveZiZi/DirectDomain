@@ -1,0 +1,57 @@
+#!/bin/sh
+
+if [ -r /mnt/user/xtdcu/set/djs/gddyjc/gd/init.tgz ]; then
+	echo "On init files receive..."
+	echo "Now unpacking the files from init.tgz..."
+	cd /mnt/user/xtdcu/set/djs/gddyjc/gd
+	tar -zxvf init.tgz
+	echo "Unpacking succeed..."
+	date > /mnt/.inited.flag
+fi
+
+if [ -r /mnt/update/auto_update.key ]; then
+    echo "Receive update key,now updating..."
+    echo "Removeing update key..."
+    rm -f /mnt/update/auto_update.key
+    cd /mnt/
+    if [ -r /mnt/update/update.tgz ]; then
+        echo "Unpacking new files..."
+        tar -zxvf /mnt/update/update.tgz
+        echo "Removing update package..."
+        rm -f /mnt/update/update.tgz
+        chmod +x /mnt/xtdcu/program/*
+        echo "Rebooting..."
+	date > /mnt/.updated.flag
+        reboot
+    fi
+    echo "Cannot find the update package named /mnt/update/update.tgz"
+    echo "Exit the update lop..."
+fi
+
+if [ -r /sbin/ldconfig ]; then
+    ldconfig
+fi
+
+export LD_LIBRARY_PATH="/lib"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/mnt/xtdcu/program/lib"
+ifconfig can0 down
+sleep 2
+ip link set can0 up type can bitrate 250000
+ifconfig eth0 down
+sleep 2
+/mnt/xtdcu/script/ipconfig.sh
+ifconfig eth0 up
+
+count=0
+while [ 1 ] ;do
+    rm -f /mnt/ramdisk/*
+    chmod +x /mnt/xtdcu/program/dcu
+    /mnt/xtdcu/program/dcu $*
+    sleep 2
+    let count=count+1
+    echo "ptu running times is $count"
+    if [ "$count" -gt 3600 ]; then
+    	echo "Will reboot because of DJS running too many times"
+    	reboot
+    fi
+done

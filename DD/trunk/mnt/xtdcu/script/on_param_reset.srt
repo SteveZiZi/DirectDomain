@@ -1,0 +1,12 @@
+#!/bin/sh
+
+echo "On dyjc param reset..."
+
+echo "Deleting user configurations..."
+rm -f /mnt/user/dyjc/set/djs/gddyjc/gd/Relay.ini
+rm -f /mnt/user/dyjc/set/djs/gddyjc/gd/meter.ini
+rm -f /mnt/user/dyjc/set/djs/gddyjc/gd/Router.ini
+rm -f /mnt/user/dyjc/set/djs/gddyjc/gd/RouterServer.ini
+rm -f /mnt/user/dyjc/set/djs/gddyjc/gd/task.ini
+rm -f /mnt/user/dyjc/set/djs/gddyjc/gd/ZBSnifferTask.ini
+

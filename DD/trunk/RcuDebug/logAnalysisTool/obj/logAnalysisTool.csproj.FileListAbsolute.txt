@@ -1,0 +1,13 @@
+D:\c#_study\logAnalysisTool\logAnalysisTool\obj\Debug\logAnalysisTool.exe
+D:\c#_study\logAnalysisTool\logAnalysisTool\obj\Debug\logAnalysisTool.pdb
+D:\c#_study\logAnalysisTool\logAnalysisTool\bin\Debug\logAnalysisTool.exe
+D:\c#_study\logAnalysisTool\logAnalysisTool\bin\Debug\logAnalysisTool.pdb
+D:\c#_study\logAnalysisTool\logAnalysisTool\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\c#_study\logAnalysisTool\logAnalysisTool\obj\Debug\ResolveAssemblyReference.cache
+D:\c#_study\logAnalysisTool\logAnalysisTool\obj\Debug\logAnalysisTool.csproj.ResolveComReference.cache
+D:\c#_study\logAnalysisTool\logAnalysisTool\obj\Debug\logAnalysisTool.Form1.resources
+D:\c#_study\logAnalysisTool\logAnalysisTool\obj\Debug\logAnalysisTool.FrmlogAnalysisConfig.resources
+D:\c#_study\logAnalysisTool\logAnalysisTool\obj\Debug\logAnalysisTool.Properties.Resources.resources
+D:\c#_study\logAnalysisTool\logAnalysisTool\obj\Debug\logAnalysisTool.csproj.GenerateResource.Cache
+D:\c#_study\CJQProduceTest\logAnalysisTool\obj\Debug\logAnalysisTool.exe
+D:\c#_study\CJQProduceTest\logAnalysisTool\obj\Debug\logAnalysisTool.pdb

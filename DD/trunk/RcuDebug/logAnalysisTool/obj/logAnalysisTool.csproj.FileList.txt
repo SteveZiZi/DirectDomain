@@ -1,0 +1,11 @@
+bin\Debug\logAnalysisTool.exe
+bin\Debug\logAnalysisTool.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\logAnalysisTool.csproj.ResolveComReference.cache
+obj\Debug\logAnalysisTool.Form1.resources
+obj\Debug\logAnalysisTool.FrmlogAnalysisConfig.resources
+obj\Debug\logAnalysisTool.Properties.Resources.resources
+obj\Debug\logAnalysisTool.csproj.GenerateResource.Cache
+obj\Debug\logAnalysisTool.exe
+obj\Debug\logAnalysisTool.pdb
+bin\Debug\Microsoft.Office.Interop.Excel.dll

@@ -1,0 +1,9 @@
+#!/bin/sh
+#function change ip
+#see ipconfig.ini
+#call ipcfgdo.sh
+
+ip link set can0 up type can bitrate 250000
+
+echo "ip link set can0 up type can bitrate 250000"
+

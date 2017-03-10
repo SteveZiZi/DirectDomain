@@ -1,0 +1,6 @@
+echo "On software reset called..."
+
+export LD_LIBRARY_PATH="/mnt/dyjc/program/lib"
+
+/mnt/dyjc/program/dyjc -stop
+killall dyjc

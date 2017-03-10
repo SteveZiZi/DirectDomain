@@ -1,0 +1,6 @@
+echo "On set day report datas..."
+
+export LD_LIBRARY_PATH="/mnt/dyjc/program/lib"
+
+/mnt/dyjc/program/dyjc -set reportday
+
